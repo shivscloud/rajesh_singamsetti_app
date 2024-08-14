@@ -21,3 +21,24 @@ mongosh command: mongodb://root:example@localhost:27017/?authSource=admin
 
 docker-compose -f .\mongo-docker-compose.yml up -d
 docker-compose -f .\mongo-docker-compose.yml down
+
+'''
+$ docker-compose -f mongo-docker-compose.yml down
+time="2024-08-14T23:44:50+05:30" level=warning msg="D:\\SingamsHUB\\app\\mongo-docker-compose.yml: `version` is obsolete"
+ Container mongo-express  Stopping
+ Container flask-app  Stopping
+ Container mongo-express  Stopped
+ Container mongo-express  Removing
+ Container mongo-express  Removed
+ Container flask-app  Stopped
+ Container flask-app  Removing
+ Container flask-app  Removed
+ Container mongo  Stopping
+ Container mongo  Stopped
+ Container mongo  Removing
+ Container mongo  Removed
+ Network app_default  Removing
+ Network app_default  Removed
+'''
+
+
