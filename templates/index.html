@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech with Rajesh Blog</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f06, #ffba00);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgb(233 169 81 / 40%);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ffba00;
+        }
+        .btn-primary {
+            background-color: #ffba00;
+            border-color: #ffba00;
+        }
+        .btn-secondary {
+            background-color: #333;
+            border-color: #333;
+        }
+        .alert-info {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+        table {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+        }
+        th, td {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Welcome to Tech with Rajesh Blog</h1>
+        <form action="/add_user" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        {% if message %}
+        <div class="alert alert-info my-3">{{ message }}</div>
+        {% endif %}
+        <a href="/users" class="btn btn-secondary mt-3">View Registered Users</a>
+    </div>
+</body>
+</html>
