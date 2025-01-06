@@ -11,6 +11,9 @@ To create a Docker network, use the following command:
 
 ```bash
 docker network create m-network
+
+Please note for mongo express the default username is Username: admin
+Password: pass
 ```
 
 Output:
